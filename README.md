@@ -21,7 +21,7 @@ module.exports = {
 ```
 
 ## Basic Usage
-Define customProperties options in components. It only work in this component. And the data is observing
+Defining customProperty options in your components. It only works in this component. And data is being observed.
 ```html
 <script>
 export default {
@@ -51,7 +51,7 @@ export default {
 }
 </style>
 ```
-You can use also this plugin programmatically. It runs only once.
+You can use this plugin programmatically as well. I runs only once and can also be used as an event
 ```html
 <script>
 export default {
