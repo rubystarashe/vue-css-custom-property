@@ -3,13 +3,14 @@
 npm install --save vue-css-custom-property
 ```
 
-Nuxt.js
 ```js
 // plugins/vue-css-custom-property.js
+import Vue from 'vue'
 import customProperty from 'vue-css-custom-property'
 Vue.use(customProperty)
 // Vue.use(customProperty, readyKey) or Vue.use(customProperty, { readyKey: 'readyKeyTest' }) for use custom property ready key. if empty, default is 'customPropertiesReady'
 ```
+Nuxt.js
 ```js
 // nuxt.config.js
 module.exports = {
