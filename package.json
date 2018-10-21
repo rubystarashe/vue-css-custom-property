@@ -13,5 +13,13 @@
     "custom properties"
   ],
   "author": "Rubystar Ashe <rubystarashe@gmail.com> (https://github.io/rubystarashe)",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubystarashe/vue-css-custom-property.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubystarashe/vue-css-custom-property/issues"
+  },
+  "homepage": "https://github.com/rubystarashe/vue-css-custom-property#readme"
 }
