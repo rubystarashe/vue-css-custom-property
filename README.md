@@ -9,7 +9,8 @@ Nuxt.js
 import customProperty from 'vue-css-custom-property'
 Vue.use(customProperty)
 // Vue.use(customProperty, readyKey) or Vue.use(customProperty, { readyKey: 'readyKeyTest' }) for use custom property ready key. if empty, default is 'customPropertiesReady'
-
+```
+```js
 // nuxt.config.js
 module.exports = {
   plugins: [
@@ -39,6 +40,7 @@ export default {
 ...
 }
 </script>
+```
 You can use too this plugin programmatically. It runs only once and can be used as event
 ```html
 <script>
@@ -55,9 +57,15 @@ export default {
 </script>
 ```
 
-## Custom Property Ready hook
+## Custom Properties Ready event hook
 Use customPropertiesReady hook in your component
 ```html
+<template>
+...
+  <div v-if="ready">Hello world!<div>
+...
+</template>
+
 <script>
 export default {
   data() {
@@ -68,7 +76,6 @@ export default {
   ...
   customPropertiesReady() {
     this.ready = true
-    this.someMethods()...
   }
   ...
 }
@@ -80,7 +87,7 @@ Or use ready key in data for if you want to know if css custom properties ready
 export default {
   data() {
     return {
-      customPropertiesReady: false  // if css custom properties is ready, turn this to true
+      customPropertiesReady: false  // if css custom properties is ready, turn this to true without use event hook
       // you can change this value name by set readyKey of this plugin options when vue.use
     }
   }
