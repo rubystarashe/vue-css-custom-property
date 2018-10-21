@@ -8,7 +8,7 @@ npm install --save vue-css-custom-property
 import Vue from 'vue'
 import customProperty from 'vue-css-custom-property'
 Vue.use(customProperty)
-// Vue.use(customProperty, readyKey) or Vue.use(customProperty, { readyKey: 'readyKeyTest' }) for use custom property ready key. if empty, default is 'customPropertiesReady'
+// Vue.use(customProperty, readyKey) or Vue.use(customProperty, { readyKey: 'readyKeyTest' }) to use custom property ready event key. If empty, default is 'customPropertiesReady'
 ```
 Nuxt.js
 ```js
@@ -21,7 +21,7 @@ module.exports = {
 ```
 
 ## Basic Usage
-Define customProperties options in components. It works only in the component with components data observing
+Define customProperties options in components. It only work in this component. And the data is observing
 ```html
 <script>
 export default {
@@ -51,15 +51,15 @@ export default {
 }
 </style>
 ```
-You can use too this plugin programmatically. It runs only once and can be used as event
+You can use also this plugin programmatically. It runs only once.
 ```html
 <script>
 export default {
   ...
   methods: {
     test(val) {
-      this.$customProperty('--global-property', val + 'px') // it will work on top of html elements
-      this.$customProperty('--local-property', val + 'px', this)  // it just on 'this' vue instance
+      this.$customProperty('--global-property', val + 'px') // It will works on top of html elements
+      this.$customProperty('--local-property', val + 'px', this)  // It only works on 'this' vue instance
     }
   }
   ...
@@ -72,7 +72,7 @@ Use customPropertiesReady hook in your component
 ```html
 <template>
 ...
-  <div v-if="ready">Hello world!<div>
+  <div class="element-a" v-if="ready">Hello world!<div>
 ...
 </template>
 
@@ -91,14 +91,14 @@ export default {
 }
 </script>
 ```
-Or use ready key in data for if you want to know if css custom properties ready
+Or put ready key to check whether css custom property is ready
 ```html
 <script>
 export default {
   data() {
     return {
-      customPropertiesReady: false  // if css custom properties is ready, turn this to true without use event hook
-      // you can change this value name by set readyKey of this plugin options when vue.use
+      customPropertiesReady: false  // If css custom properties is ready, change customPropertiesReady to true without using event hook
+      // You can change this variable name by setting readyKey of this plugin options on vue.use
     }
   }
 }

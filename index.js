@@ -19,7 +19,7 @@ export default {
           })
         })
         this.$data[pluginOptions.readyKey] = true
-        if(this.$options.customPropertiesReady) this.$options.customPropertiesReady.apply(this)
+        if (this.$options.customPropertiesReady) this.$options.customPropertiesReady.apply(this)
       }
     })
     const functions = (name, value, vue = null) => {
