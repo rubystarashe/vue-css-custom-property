@@ -41,6 +41,15 @@ export default {
 ...
 }
 </script>
+
+<style>
+.element-a {
+  font-size: var(--test-a)
+}
+.element-b {
+  font-size: var(--test-b)
+}
+</style>
 ```
 You can use too this plugin programmatically. It runs only once and can be used as event
 ```html
