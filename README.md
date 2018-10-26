@@ -94,7 +94,7 @@ export default {
 }
 </script>
 ```
-Or put ready key to check whether css custom property is ready. 
+Or put ready key to check whether css custom property is ready.   
 미리 준비된 customPropertiesReady 키를 데이터에 추가하여 즉시 바인딩 할 수도 있습니다.
 ```html
 <script>
